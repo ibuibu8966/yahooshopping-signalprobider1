@@ -56,8 +56,8 @@ export function Pricing() {
               key={index}
               className={`relative rounded-3xl p-10 card-premium ${
                 plan.popular
-                  ? "bg-gradient-to-b from-primary/10 to-card border-2 border-primary/50"
-                  : "bg-card border border-border/50"
+                  ? "bg-gradient-to-b from-primary/10 to-card border-2 border-primary shadow-lg"
+                  : "bg-card border border-border shadow-sm"
               }`}
             >
               {plan.popular && (

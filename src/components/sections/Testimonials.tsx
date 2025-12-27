@@ -51,7 +51,7 @@ export function Testimonials() {
           {testimonials.map((testimonial, index) => (
             <div
               key={index}
-              className="relative bg-card rounded-2xl p-8 border border-border/50 card-premium"
+              className="relative bg-card rounded-2xl p-8 border border-border shadow-sm card-premium"
             >
               {/* Quote icon */}
               <div className="absolute -top-4 -left-2 w-12 h-12 rounded-xl bg-primary/10 flex items-center justify-center">

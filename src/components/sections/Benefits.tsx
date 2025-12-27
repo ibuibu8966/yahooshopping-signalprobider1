@@ -69,7 +69,7 @@ export function Benefits() {
           {benefits.map((benefit, index) => (
             <div
               key={index}
-              className="group relative p-8 rounded-2xl bg-card border border-border/50 card-premium"
+              className="group relative p-8 rounded-2xl bg-card border border-border shadow-sm card-premium"
             >
               <div className="absolute inset-0 rounded-2xl bg-gradient-to-br from-primary/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
               <div className="relative">

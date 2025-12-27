@@ -60,7 +60,7 @@ export function Hero() {
           </div>
 
           <div className="relative">
-            <div className="aspect-[4/3] rounded-2xl bg-card border border-border/50 shadow-2xl overflow-hidden glow">
+            <div className="aspect-[4/3] rounded-2xl bg-card border border-border shadow-xl overflow-hidden">
               <div className="absolute inset-0 bg-gradient-to-br from-primary/5 to-gold/5" />
               <div className="absolute inset-0 flex items-center justify-center">
                 <div className="text-center space-y-6 p-8">

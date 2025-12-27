@@ -42,7 +42,7 @@ export function Stats() {
           {stats.map((stat, index) => (
             <div
               key={index}
-              className="relative text-center p-8 md:p-10 rounded-2xl bg-card border border-border/50 card-premium group"
+              className="relative text-center p-8 md:p-10 rounded-2xl bg-card border border-border shadow-sm card-premium group"
             >
               <div className="absolute inset-0 rounded-2xl bg-gradient-to-br from-primary/5 to-gold/5 opacity-0 group-hover:opacity-100 transition-opacity" />
               <div className="relative">

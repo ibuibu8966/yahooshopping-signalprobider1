@@ -53,7 +53,7 @@ export function FinalCTA() {
 
         {/* Contact Form */}
         <div id="contact-form" className="max-w-2xl mx-auto mt-20">
-          <div className="bg-card border border-border/50 rounded-3xl p-10 md:p-12 shadow-2xl">
+          <div className="bg-card border border-border rounded-3xl p-10 md:p-12 shadow-xl">
             <div className="text-center mb-10">
               <p className="text-primary text-sm font-medium tracking-widest uppercase mb-3">
                 Contact
