@@ -1,4 +1,3 @@
-import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import {
   Wallet,
   PackageCheck,
@@ -49,35 +48,40 @@ const benefits = [
 
 export function Benefits() {
   return (
-    <section id="benefits" className="py-20 md:py-32">
+    <section id="benefits" className="py-24 md:py-40">
       <div className="container mx-auto px-4">
-        <div className="text-center mb-12">
-          <h2 className="text-3xl md:text-4xl font-bold mb-4">
+        <div className="text-center mb-20">
+          <p className="text-primary text-sm font-medium tracking-widest uppercase mb-4">
+            Why Choose Us
+          </p>
+          <h2 className="text-3xl md:text-5xl font-bold mb-6">
             選ばれる
-            <span className="text-primary">6つの理由</span>
+            <span className="text-gradient">6つの理由</span>
           </h2>
-          <p className="text-muted-foreground max-w-2xl mx-auto">
+          <p className="text-muted-foreground max-w-2xl mx-auto text-lg leading-relaxed">
             ヤフショ運用の面倒な作業をすべて代行。
+            <br className="hidden md:block" />
             オーナー様は投資するだけで利益を得られる仕組みを提供します。
           </p>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           {benefits.map((benefit, index) => (
-            <Card
+            <div
               key={index}
-              className="group hover:shadow-lg transition-shadow duration-300"
+              className="group relative p-8 rounded-2xl bg-card border border-border/50 card-premium"
             >
-              <CardHeader>
-                <div className="w-12 h-12 rounded-lg bg-primary/10 flex items-center justify-center mb-4 group-hover:bg-primary/20 transition-colors">
-                  <benefit.icon className="w-6 h-6 text-primary" />
+              <div className="absolute inset-0 rounded-2xl bg-gradient-to-br from-primary/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
+              <div className="relative">
+                <div className="w-14 h-14 rounded-xl bg-gradient-to-br from-primary/20 to-gold/10 flex items-center justify-center mb-6 border border-primary/20">
+                  <benefit.icon className="w-7 h-7 text-primary" />
                 </div>
-                <CardTitle className="text-xl">{benefit.title}</CardTitle>
-              </CardHeader>
-              <CardContent>
-                <p className="text-muted-foreground">{benefit.description}</p>
-              </CardContent>
-            </Card>
+                <h3 className="text-xl font-bold mb-3">{benefit.title}</h3>
+                <p className="text-muted-foreground leading-relaxed">
+                  {benefit.description}
+                </p>
+              </div>
+            </div>
           ))}
         </div>
       </div>

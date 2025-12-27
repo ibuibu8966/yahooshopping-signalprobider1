@@ -1,5 +1,4 @@
-import { Card, CardContent } from "@/components/ui/card";
-import { Star, User } from "lucide-react";
+import { Star, Quote } from "lucide-react";
 
 const testimonials = [
   {
@@ -30,25 +29,57 @@ const testimonials = [
 
 export function Testimonials() {
   return (
-    <section id="testimonials" className="py-20 md:py-32 bg-muted/30">
-      <div className="container mx-auto px-4">
-        <div className="text-center mb-12">
-          <h2 className="text-3xl md:text-4xl font-bold mb-4">
-            <span className="text-primary">お客様</span>
+    <section id="testimonials" className="py-24 md:py-40 relative">
+      {/* Subtle background */}
+      <div className="absolute inset-0 bg-gradient-to-b from-transparent via-card/30 to-transparent" />
+
+      <div className="container mx-auto px-4 relative z-10">
+        <div className="text-center mb-20">
+          <p className="text-primary text-sm font-medium tracking-widest uppercase mb-4">
+            Testimonials
+          </p>
+          <h2 className="text-3xl md:text-5xl font-bold mb-6">
+            <span className="text-gradient">お客様</span>
             の声
           </h2>
-          <p className="text-muted-foreground max-w-2xl mx-auto">
+          <p className="text-muted-foreground max-w-2xl mx-auto text-lg">
             実際にご利用いただいているオーナー様からの声をご紹介します。
           </p>
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
           {testimonials.map((testimonial, index) => (
-            <Card key={index} className="h-full">
-              <CardContent className="pt-6">
-                <div className="flex items-center gap-4 mb-4">
-                  <div className="w-12 h-12 rounded-full bg-muted flex items-center justify-center">
-                    <User className="w-6 h-6 text-muted-foreground" />
+            <div
+              key={index}
+              className="relative bg-card rounded-2xl p-8 border border-border/50 card-premium"
+            >
+              {/* Quote icon */}
+              <div className="absolute -top-4 -left-2 w-12 h-12 rounded-xl bg-primary/10 flex items-center justify-center">
+                <Quote className="w-6 h-6 text-primary" />
+              </div>
+
+              <div className="pt-4">
+                {/* Rating */}
+                <div className="flex gap-1 mb-6">
+                  {[...Array(testimonial.rating)].map((_, i) => (
+                    <Star
+                      key={i}
+                      className="w-5 h-5 fill-gold text-gold"
+                    />
+                  ))}
+                </div>
+
+                {/* Content */}
+                <p className="text-foreground/80 leading-relaxed mb-8">
+                  「{testimonial.content}」
+                </p>
+
+                {/* Author */}
+                <div className="flex items-center gap-4 pt-6 border-t border-border/50">
+                  <div className="w-12 h-12 rounded-full bg-gradient-to-br from-primary/20 to-gold/20 flex items-center justify-center border border-primary/20">
+                    <span className="text-lg font-bold text-primary">
+                      {testimonial.name.charAt(0)}
+                    </span>
                   </div>
                   <div>
                     <p className="font-medium">{testimonial.name}</p>
@@ -57,25 +88,12 @@ export function Testimonials() {
                     </p>
                   </div>
                 </div>
-
-                <div className="flex gap-1 mb-4">
-                  {[...Array(testimonial.rating)].map((_, i) => (
-                    <Star
-                      key={i}
-                      className="w-4 h-4 fill-primary text-primary"
-                    />
-                  ))}
-                </div>
-
-                <p className="text-muted-foreground leading-relaxed">
-                  {testimonial.content}
-                </p>
-              </CardContent>
-            </Card>
+              </div>
+            </div>
           ))}
         </div>
 
-        <p className="text-center text-sm text-muted-foreground mt-8">
+        <p className="text-center text-sm text-muted-foreground mt-12">
           ※ 個人の感想であり、効果を保証するものではありません。
         </p>
       </div>

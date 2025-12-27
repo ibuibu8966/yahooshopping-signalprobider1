@@ -45,26 +45,36 @@ const faqs = [
 
 export function FAQ() {
   return (
-    <section id="faq" className="py-20 md:py-32 bg-muted/30">
-      <div className="container mx-auto px-4">
-        <div className="text-center mb-12">
-          <h2 className="text-3xl md:text-4xl font-bold mb-4">
+    <section id="faq" className="py-24 md:py-40 relative">
+      {/* Subtle background */}
+      <div className="absolute inset-0 bg-gradient-to-b from-transparent via-card/30 to-transparent" />
+
+      <div className="container mx-auto px-4 relative z-10">
+        <div className="text-center mb-20">
+          <p className="text-primary text-sm font-medium tracking-widest uppercase mb-4">
+            FAQ
+          </p>
+          <h2 className="text-3xl md:text-5xl font-bold mb-6">
             よくある
-            <span className="text-primary">ご質問</span>
+            <span className="text-gradient">ご質問</span>
           </h2>
-          <p className="text-muted-foreground max-w-2xl mx-auto">
+          <p className="text-muted-foreground max-w-2xl mx-auto text-lg">
             お問い合わせ前にご確認ください。
           </p>
         </div>
 
         <div className="max-w-3xl mx-auto">
-          <Accordion type="single" collapsible className="w-full">
+          <Accordion type="single" collapsible className="w-full space-y-4">
             {faqs.map((faq, index) => (
-              <AccordionItem key={index} value={`item-${index}`}>
-                <AccordionTrigger className="text-left">
+              <AccordionItem
+                key={index}
+                value={`item-${index}`}
+                className="bg-card border border-border/50 rounded-xl px-6 data-[state=open]:border-primary/30"
+              >
+                <AccordionTrigger className="text-left text-lg hover:text-primary hover:no-underline py-6">
                   {faq.question}
                 </AccordionTrigger>
-                <AccordionContent className="text-muted-foreground">
+                <AccordionContent className="text-muted-foreground pb-6 leading-relaxed">
                   {faq.answer}
                 </AccordionContent>
               </AccordionItem>

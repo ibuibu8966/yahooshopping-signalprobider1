@@ -40,49 +40,64 @@ const steps = [
 
 export function HowItWorks() {
   return (
-    <section id="how-it-works" className="py-20 md:py-32 bg-muted/30">
-      <div className="container mx-auto px-4">
-        <div className="text-center mb-16">
-          <h2 className="text-3xl md:text-4xl font-bold mb-4">
-            <span className="text-primary">3ステップ</span>
+    <section id="how-it-works" className="py-24 md:py-40 relative">
+      {/* Subtle background gradient */}
+      <div className="absolute inset-0 bg-gradient-to-b from-transparent via-card/50 to-transparent" />
+
+      <div className="container mx-auto px-4 relative z-10">
+        <div className="text-center mb-20">
+          <p className="text-primary text-sm font-medium tracking-widest uppercase mb-4">
+            How It Works
+          </p>
+          <h2 className="text-3xl md:text-5xl font-bold mb-6">
+            <span className="text-gradient">3ステップ</span>
             で運用開始
           </h2>
-          <p className="text-muted-foreground max-w-2xl mx-auto">
+          <p className="text-muted-foreground max-w-2xl mx-auto text-lg leading-relaxed">
             初期構築から運用開始、月次レポートまで。
+            <br className="hidden md:block" />
             すべてをお任せいただけるシンプルな流れです。
           </p>
         </div>
 
         <div className="relative">
           {/* Connection Line */}
-          <div className="hidden lg:block absolute top-1/2 left-0 right-0 h-0.5 bg-gradient-to-r from-primary/20 via-primary to-primary/20 -translate-y-1/2 z-0" />
+          <div className="hidden lg:block absolute top-24 left-[16.5%] right-[16.5%] h-px bg-gradient-to-r from-primary/50 via-gold/50 to-primary/50 z-0" />
 
-          <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
+          <div className="grid grid-cols-1 lg:grid-cols-3 gap-10">
             {steps.map((step, index) => (
               <div
                 key={index}
-                className="relative bg-background rounded-2xl p-8 border shadow-sm z-10"
+                className="relative"
               >
-                <div className="flex items-center gap-4 mb-6">
-                  <div className="w-16 h-16 rounded-2xl bg-primary text-primary-foreground flex items-center justify-center font-bold text-xl">
+                {/* Step number badge */}
+                <div className="flex justify-center mb-8">
+                  <div className="w-20 h-20 rounded-2xl bg-gradient-to-br from-primary to-primary/80 text-primary-foreground flex items-center justify-center font-bold text-2xl shadow-lg glow relative z-10">
                     {step.number}
-                  </div>
-                  <div>
-                    <step.icon className="w-6 h-6 text-primary mb-1" />
-                    <h3 className="text-xl font-bold">{step.title}</h3>
                   </div>
                 </div>
 
-                <p className="text-muted-foreground mb-6">{step.description}</p>
+                <div className="bg-card rounded-2xl p-8 border border-border/50 card-premium h-full">
+                  <div className="text-center mb-6">
+                    <div className="inline-flex items-center justify-center w-12 h-12 rounded-xl bg-primary/10 mb-4">
+                      <step.icon className="w-6 h-6 text-primary" />
+                    </div>
+                    <h3 className="text-2xl font-bold">{step.title}</h3>
+                  </div>
 
-                <ul className="space-y-2">
-                  {step.items.map((item, i) => (
-                    <li key={i} className="flex items-center text-sm">
-                      <span className="w-1.5 h-1.5 rounded-full bg-primary mr-3" />
-                      {item}
-                    </li>
-                  ))}
-                </ul>
+                  <p className="text-muted-foreground mb-8 text-center leading-relaxed">
+                    {step.description}
+                  </p>
+
+                  <ul className="space-y-3">
+                    {step.items.map((item, i) => (
+                      <li key={i} className="flex items-center text-sm">
+                        <span className="w-2 h-2 rounded-full bg-gradient-to-r from-primary to-gold mr-3 shrink-0" />
+                        <span className="text-foreground/80">{item}</span>
+                      </li>
+                    ))}
+                  </ul>
+                </div>
               </div>
             ))}
           </div>
