@@ -1,0 +1,31 @@
+import { Header } from "@/components/layout/Header";
+import { Footer } from "@/components/layout/Footer";
+import { Hero } from "@/components/sections/Hero";
+import { Partners } from "@/components/sections/Partners";
+import { Benefits } from "@/components/sections/Benefits";
+import { HowItWorks } from "@/components/sections/HowItWorks";
+import { Pricing } from "@/components/sections/Pricing";
+import { Testimonials } from "@/components/sections/Testimonials";
+import { Stats } from "@/components/sections/Stats";
+import { FAQ } from "@/components/sections/FAQ";
+import { FinalCTA } from "@/components/sections/FinalCTA";
+
+export default function Home() {
+  return (
+    <>
+      <Header />
+      <main>
+        <Hero />
+        <Partners />
+        <Benefits />
+        <HowItWorks />
+        <Pricing />
+        <Testimonials />
+        <Stats />
+        <FAQ />
+        <FinalCTA />
+      </main>
+      <Footer />
+    </>
+  );
+}
