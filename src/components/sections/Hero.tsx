@@ -18,7 +18,7 @@ export function Hero() {
       {/* Background image */}
       <div className="absolute inset-0 overflow-hidden">
         <Image
-          src="/images/pexels-nickcollins-1293120.jpg"
+          src="/images/pexels-pixabay-268976.jpg"
           alt="Background"
           fill
           className="object-cover opacity-10"
