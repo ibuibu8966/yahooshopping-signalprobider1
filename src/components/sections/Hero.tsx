@@ -29,7 +29,7 @@ export function Hero() {
 
       <div className="container mx-auto px-4 relative z-10">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
-          <div className="space-y-10">
+          <div className="space-y-10 bg-white/90 backdrop-blur-sm p-8 rounded-2xl shadow-lg">
             {/* Yahoo!ショッピング logo badge */}
             <div className="inline-flex items-center gap-3 px-5 py-3 rounded-full border border-primary/30 bg-white shadow-sm">
               <Image
@@ -42,7 +42,7 @@ export function Hero() {
               <span className="text-primary text-sm font-medium">運用代行</span>
             </div>
 
-            <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold tracking-tight leading-tight">
+            <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold tracking-tight leading-tight text-gray-900">
               オーナーは
               <br />
               <span className="text-gradient">資金を投下</span>
@@ -50,7 +50,7 @@ export function Hero() {
               するだけ
             </h1>
 
-            <p className="text-lg md:text-xl text-muted-foreground max-w-xl leading-relaxed">
+            <p className="text-lg md:text-xl text-gray-700 max-w-xl leading-relaxed">
               外注さんへの指示は全部こちら。仕入れから買取まで丸投げで、
               月次で利益計算・報告まで実施します。
             </p>
@@ -62,7 +62,7 @@ export function Hero() {
                   <ArrowRight className="ml-2 h-5 w-5" />
                 </a>
               </Button>
-              <Button size="lg" variant="outline" asChild className="text-lg px-10 py-6 rounded-lg border-border/50 hover:bg-secondary">
+              <Button size="lg" variant="outline" asChild className="text-lg px-10 py-6 rounded-lg border-gray-300 bg-white hover:bg-gray-50">
                 <a href="#pricing">料金を見る</a>
               </Button>
             </div>
@@ -72,13 +72,13 @@ export function Hero() {
                 <div className="w-10 h-10 rounded-full bg-primary/10 flex items-center justify-center">
                   <Users className="w-5 h-5 text-primary" />
                 </div>
-                <span className="text-sm text-muted-foreground">運用実績多数</span>
+                <span className="text-sm text-gray-700">運用実績多数</span>
               </div>
               <div className="flex items-center gap-3">
                 <div className="w-10 h-10 rounded-full bg-gold/10 flex items-center justify-center">
                   <TrendingUp className="w-5 h-5 text-gold" />
                 </div>
-                <span className="text-sm text-muted-foreground">月次レポート提供</span>
+                <span className="text-sm text-gray-700">月次レポート提供</span>
               </div>
             </div>
           </div>

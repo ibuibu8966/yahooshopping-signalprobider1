@@ -4,38 +4,32 @@ const benefits = [
   {
     icon: "/images/icon-wallet.png",
     title: "オーナーは資金投下のみ",
-    description:
-      "作業は一切不要。資金を用意するだけで、運用はすべてお任せいただけます。",
+    description: ["作業は一切不要。", "資金を用意するだけで、", "運用はすべてお任せいただけます。"],
   },
   {
     icon: "/images/icon-task.png",
     title: "外注指示まで丸投げ",
-    description:
-      "外注さんへの購入指示も当方が対応。購入フローとルールの伝授まで行います。",
+    description: ["外注さんへの購入指示も当方が対応。", "購入フローとルールの伝授まで行います。"],
   },
   {
     icon: "/images/icon-shop.png",
     title: "買取屋とのやり取り",
-    description:
-      "商品リサーチから買取屋とのやり取りまで、運用に必要な作業をすべて代行します。",
+    description: ["商品リサーチから買取屋とのやり取りまで、", "運用に必要な作業をすべて代行します。"],
   },
   {
     icon: "/images/icon-document.png",
     title: "請求管理",
-    description:
-      "買取屋への請求管理も代行。煩雑な事務作業から解放されます。",
+    description: ["買取屋への請求管理も代行。", "煩雑な事務作業から解放されます。"],
   },
   {
     icon: "/images/icon-chart.png",
     title: "月次レポート",
-    description:
-      "毎月の利益計算と詳細なレポートを提供。収支が一目でわかります。",
+    description: ["毎月の利益計算と詳細なレポートを提供。", "収支が一目でわかります。"],
   },
   {
     icon: "/images/icon-shield.png",
     title: "リスク管理（規約遵守）",
-    description:
-      "ヤフショの規約に準拠した運用設計で、アカウントリスクを最小化します。",
+    description: ["ヤフショの規約に準拠した運用設計で、", "アカウントリスクを最小化します。"],
   },
 ];
 
@@ -77,7 +71,12 @@ export function Benefits() {
                 </div>
                 <h3 className="text-xl font-bold mb-3">{benefit.title}</h3>
                 <p className="text-muted-foreground leading-relaxed">
-                  {benefit.description}
+                  {benefit.description.map((line, i) => (
+                    <span key={i}>
+                      {line}
+                      {i < benefit.description.length - 1 && <br />}
+                    </span>
+                  ))}
                 </p>
               </div>
             </div>
