@@ -73,9 +73,18 @@ export function HowItWorks() {
             で運用開始
           </h2>
           <p className="text-gray-700 max-w-2xl mx-auto text-lg leading-relaxed">
-            初期構築から運用開始、月次レポートまで。
-            <br className="hidden md:block" />
-            すべてをお任せいただけるシンプルな流れです。
+            <span className="md:hidden">
+              初期構築から運用開始、
+              <br />
+              月次レポートまで。
+              <br />
+              すべてをお任せいただけるシンプルな流れです。
+            </span>
+            <span className="hidden md:inline">
+              初期構築から運用開始、月次レポートまで。
+              <br />
+              すべてをお任せいただけるシンプルな流れです。
+            </span>
           </p>
         </div>
 

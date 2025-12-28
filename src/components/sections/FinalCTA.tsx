@@ -49,7 +49,14 @@ export function FinalCTA() {
 
             <p className="text-sm opacity-75 mt-8 flex items-center justify-center gap-2">
               <Shield className="w-4 h-4" />
-              相談は無料です。強引な営業は一切行いません。
+              <span className="md:hidden">
+                相談は無料です。
+                <br />
+                強引な営業は一切行いません。
+              </span>
+              <span className="hidden md:inline">
+                相談は無料です。強引な営業は一切行いません。
+              </span>
             </p>
           </div>
 
@@ -167,7 +174,14 @@ export function FinalCTA() {
               </Button>
 
               <p className="text-xs text-muted-foreground text-center">
-                ※ 送信いただいた情報は、お問い合わせ対応にのみ使用いたします。
+                <span className="md:hidden">
+                  ※ 送信いただいた情報は、
+                  <br />
+                  お問い合わせ対応にのみ使用いたします。
+                </span>
+                <span className="hidden md:inline">
+                  ※ 送信いただいた情報は、お問い合わせ対応にのみ使用いたします。
+                </span>
               </p>
             </form>
           </div>

@@ -57,7 +57,14 @@ export function Stats() {
         </div>
 
         <p className="text-center text-sm text-muted-foreground mt-12">
-          ※ 2024年4月〜10月の運用実績です。利益を保証するものではありません。
+          <span className="md:hidden">
+            ※ 2024年4月〜10月の運用実績です。
+            <br />
+            利益を保証するものではありません。
+          </span>
+          <span className="hidden md:inline">
+            ※ 2024年4月〜10月の運用実績です。利益を保証するものではありません。
+          </span>
         </p>
       </div>
     </section>

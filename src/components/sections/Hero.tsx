@@ -51,8 +51,17 @@ export function Hero() {
             </h1>
 
             <p className="text-lg md:text-xl text-gray-700 max-w-xl leading-relaxed">
-              外注さんへの指示は全部こちら。仕入れから買取まで丸投げで、
-              月次で利益計算・報告まで実施します。
+              <span className="md:hidden">
+                外注さんへの指示は全部こちら。
+                <br />
+                仕入れから買取まで丸投げで、
+                <br />
+                月次で利益計算・報告まで実施します。
+              </span>
+              <span className="hidden md:inline">
+                外注さんへの指示は全部こちら。仕入れから買取まで丸投げで、
+                月次で利益計算・報告まで実施します。
+              </span>
             </p>
 
             <div className="flex flex-col sm:flex-row gap-4 pt-4">

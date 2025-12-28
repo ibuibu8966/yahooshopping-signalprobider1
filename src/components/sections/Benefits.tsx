@@ -46,9 +46,16 @@ export function Benefits() {
             <span className="text-gradient">6つの理由</span>
           </h2>
           <p className="text-gray-700 max-w-2xl mx-auto text-lg leading-relaxed">
-            ヤフショ運用の面倒な作業をすべて代行。
-            <br className="hidden md:block" />
-            オーナー様は投資するだけで利益を得られる仕組みを提供します。
+            <span className="md:hidden">
+              ヤフショ運用の面倒な作業をすべて代行。
+              <br />
+              オーナー様は投資するだけで利益を得られる仕組みを提供します。
+            </span>
+            <span className="hidden md:inline">
+              ヤフショ運用の面倒な作業をすべて代行。
+              <br />
+              オーナー様は投資するだけで利益を得られる仕組みを提供します。
+            </span>
           </p>
         </div>
 

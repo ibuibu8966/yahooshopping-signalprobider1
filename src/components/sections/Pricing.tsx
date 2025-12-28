@@ -46,7 +46,14 @@ export function Pricing() {
             <span className="text-gradient">料金体系</span>
           </h2>
           <p className="text-gray-700 max-w-2xl mx-auto text-lg leading-relaxed">
-            初期費用と月額費用のみ。追加料金はありません。
+            <span className="md:hidden">
+              初期費用と月額費用のみ。
+              <br />
+              追加料金はありません。
+            </span>
+            <span className="hidden md:inline">
+              初期費用と月額費用のみ。追加料金はありません。
+            </span>
           </p>
         </div>
 
@@ -113,7 +120,14 @@ export function Pricing() {
 
         <div className="mt-16 text-center">
           <p className="text-sm text-muted-foreground">
-            ※ 契約期間・お支払い方法については、お問い合わせ時にご案内いたします。
+            <span className="md:hidden">
+              ※ 契約期間・お支払い方法については、
+              <br />
+              お問い合わせ時にご案内いたします。
+            </span>
+            <span className="hidden md:inline">
+              ※ 契約期間・お支払い方法については、お問い合わせ時にご案内いたします。
+            </span>
           </p>
         </div>
       </div>
