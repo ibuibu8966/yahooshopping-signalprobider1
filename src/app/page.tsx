@@ -4,7 +4,6 @@ import { Hero } from "@/components/sections/Hero";
 import { Benefits } from "@/components/sections/Benefits";
 import { HowItWorks } from "@/components/sections/HowItWorks";
 import { Pricing } from "@/components/sections/Pricing";
-import { Testimonials } from "@/components/sections/Testimonials";
 import { Stats } from "@/components/sections/Stats";
 import { FAQ } from "@/components/sections/FAQ";
 import { FinalCTA } from "@/components/sections/FinalCTA";
@@ -18,7 +17,6 @@ export default function Home() {
         <Benefits />
         <HowItWorks />
         <Pricing />
-        <Testimonials />
         <Stats />
         <FAQ />
         <FinalCTA />

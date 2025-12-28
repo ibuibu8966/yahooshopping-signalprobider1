@@ -70,7 +70,7 @@ export function Benefits() {
                   />
                 </div>
                 <h3 className="text-xl font-bold mb-3">{benefit.title}</h3>
-                <p className="text-muted-foreground leading-relaxed">
+                <p className="text-muted-foreground leading-relaxed text-sm">
                   {benefit.description.map((line, i) => (
                     <span key={i}>
                       {line}

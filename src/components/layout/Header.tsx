@@ -10,7 +10,6 @@ const navItems = [
   { href: "#benefits", label: "ベネフィット" },
   { href: "#how-it-works", label: "使い方" },
   { href: "#pricing", label: "料金" },
-  { href: "#testimonials", label: "お客様の声" },
   { href: "#stats", label: "実績" },
   { href: "#faq", label: "FAQ" },
 ];
