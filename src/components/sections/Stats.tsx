@@ -1,23 +1,23 @@
 const stats = [
   {
-    value: "50+",
-    label: "累計運用件数",
-    description: "これまでの運用実績",
+    value: "4,500万円+",
+    label: "累計運用額",
+    description: "半年間の運用実績",
   },
   {
-    value: "98%",
-    label: "継続率",
-    description: "ご満足いただける運用",
+    value: "140万円+",
+    label: "累計利益",
+    description: "運用で生み出した利益",
   },
   {
-    value: "24h",
-    label: "サポート対応",
-    description: "迅速なサポート体制",
+    value: "3.5%",
+    label: "平均利益率",
+    description: "安定した収益性",
   },
   {
-    value: "100%",
-    label: "月次レポート",
-    description: "毎月の詳細報告",
+    value: "1,400+",
+    label: "累計取扱数",
+    description: "商品の取扱実績",
   },
 ];
 
@@ -46,7 +46,7 @@ export function Stats() {
             >
               <div className="absolute inset-0 rounded-2xl bg-gradient-to-br from-primary/5 to-gold/5 opacity-0 group-hover:opacity-100 transition-opacity" />
               <div className="relative">
-                <p className="text-5xl md:text-6xl font-bold text-gradient mb-3">
+                <p className="text-3xl md:text-4xl lg:text-5xl font-bold text-gradient mb-3">
                   {stat.value}
                 </p>
                 <p className="font-medium text-lg mb-2">{stat.label}</p>
@@ -57,7 +57,7 @@ export function Stats() {
         </div>
 
         <p className="text-center text-sm text-muted-foreground mt-12">
-          ※ 数値は目標値・参考値を含みます。最新の実績はお問い合わせください。
+          ※ 2024年4月〜10月の運用実績です。利益を保証するものではありません。
         </p>
       </div>
     </section>
