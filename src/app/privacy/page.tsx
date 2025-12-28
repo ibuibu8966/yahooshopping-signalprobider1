@@ -49,7 +49,7 @@ export default function PrivacyPage() {
                 </p>
                 <ul className="list-disc pl-6 text-muted-foreground space-y-2 leading-relaxed">
                   <li>本サービスの提供、運用、連絡、本人確認</li>
-                  <li>初期構築・運用支援の遂行（利益計算、レポート等を含む）</li>
+                  <li>運用支援の遂行（利益計算、レポート等を含む）</li>
                   <li>問い合わせ対応、サポート対応</li>
                   <li>請求・決済・支払い確認</li>
                   <li>不正利用の防止、セキュリティ確保</li>

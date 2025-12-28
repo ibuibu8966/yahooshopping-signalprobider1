@@ -58,7 +58,6 @@ export default function LawPage() {
                 <div className="font-medium text-foreground">販売価格</div>
                 <div className="md:col-span-2 text-muted-foreground">
                   <ul className="list-disc pl-5 space-y-1">
-                    <li>初期費用：330,000円（税込）</li>
                     <li>月額費用：110,000円（税込）</li>
                   </ul>
                   <p className="mt-2 text-sm">
@@ -89,14 +88,14 @@ export default function LawPage() {
               <div className="grid grid-cols-1 md:grid-cols-3 gap-4 py-6 border-b border-border/50">
                 <div className="font-medium text-foreground">支払時期</div>
                 <div className="md:col-span-2 text-muted-foreground">
-                  申込時の定めに従います（初期費用は契約成立後速やかに、月額費用は毎月所定の日まで）。
+                  申込時の定めに従います（月額費用は毎月所定の日まで）。
                 </div>
               </div>
 
               <div className="grid grid-cols-1 md:grid-cols-3 gap-4 py-6 border-b border-border/50">
                 <div className="font-medium text-foreground">役務の提供時期</div>
                 <div className="md:col-span-2 text-muted-foreground">
-                  初期費用の入金確認後、順次サービス提供を開始します（詳細は申込時にご案内）。
+                  お申込み後、順次サービス提供を開始します（詳細は申込時にご案内）。
                 </div>
               </div>
 
@@ -113,7 +112,7 @@ export default function LawPage() {
                   <ul className="list-disc pl-5 space-y-2">
                     <li>利用者は、更新日の14日前までに所定の方法で通知することで、次回更新をもって解約できます。</li>
                     <li>解約時点までに発生した料金は、解約理由を問わず返金いたしません。</li>
-                    <li>初期構築等、既に提供済みの業務に係る料金についても返金対象外です（別途返金条件を明示した場合を除く）。</li>
+                    <li>既に提供済みの業務に係る料金についても返金対象外です（別途返金条件を明示した場合を除く）。</li>
                   </ul>
                 </div>
               </div>

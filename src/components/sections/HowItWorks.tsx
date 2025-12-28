@@ -5,7 +5,7 @@ const steps = [
   {
     number: "01",
     icon: Settings,
-    title: "初期構築",
+    title: "準備・セットアップ",
     description: [
       "ヤフショアカウントの作成、",
       "配送先住所・クレカ登録、",
@@ -74,14 +74,14 @@ export function HowItWorks() {
           </h2>
           <p className="text-gray-700 max-w-2xl mx-auto text-lg leading-relaxed">
             <span className="md:hidden">
-              初期構築から運用開始、
+              準備から運用開始、
               <br />
               月次レポートまで。
               <br />
               すべてをお任せいただけるシンプルな流れです。
             </span>
             <span className="hidden md:inline">
-              初期構築から運用開始、月次レポートまで。
+              準備から運用開始、月次レポートまで。
               <br />
               すべてをお任せいただけるシンプルな流れです。
             </span>
