@@ -73,13 +73,13 @@ export function Pricing() {
                 <p className="text-sm text-muted-foreground mb-2 tracking-wide">
                   {plan.name}
                 </p>
-                <div className="flex items-baseline gap-2">
+                <div className="flex items-end gap-1">
                   <span className="text-5xl md:text-6xl font-bold text-gradient">
                     ¥{plan.price}
                   </span>
-                  <span className="text-muted-foreground">{plan.unit}</span>
+                  <span className="text-sm text-muted-foreground pb-2">{plan.unit}</span>
                 </div>
-                <p className="text-muted-foreground mt-4 leading-relaxed">
+                <p className="text-muted-foreground mt-4 leading-relaxed text-sm">
                   {plan.description}
                 </p>
               </div>
