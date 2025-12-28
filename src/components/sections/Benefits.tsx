@@ -1,48 +1,41 @@
-import {
-  Wallet,
-  PackageCheck,
-  BarChart3,
-  Users,
-  Shield,
-  Rocket,
-} from "lucide-react";
+import Image from "next/image";
 
 const benefits = [
   {
-    icon: Wallet,
+    icon: "/images/icon-wallet.png",
     title: "オーナーは資金投下のみ",
     description:
       "作業は一切不要。資金を用意するだけで、運用はすべてお任せいただけます。",
   },
   {
-    icon: PackageCheck,
-    title: "仕入れ〜買取まで丸投げ",
+    icon: "/images/icon-task.png",
+    title: "外注指示まで丸投げ",
+    description:
+      "外注さんへの購入指示も当方が対応。購入フローとルールの伝授まで行います。",
+  },
+  {
+    icon: "/images/icon-shop.png",
+    title: "買取屋とのやり取り",
     description:
       "商品リサーチから買取屋とのやり取りまで、運用に必要な作業をすべて代行します。",
   },
   {
-    icon: BarChart3,
-    title: "月次で利益レポート",
+    icon: "/images/icon-document.png",
+    title: "請求管理",
+    description:
+      "買取屋への請求管理も代行。煩雑な事務作業から解放されます。",
+  },
+  {
+    icon: "/images/icon-chart.png",
+    title: "月次レポート",
     description:
       "毎月の利益計算と詳細なレポートを提供。収支が一目でわかります。",
   },
   {
-    icon: Users,
-    title: "外注運用を標準化",
-    description:
-      "外注さんへの購入フローとルールの伝授を行い、安定した運用体制を構築します。",
-  },
-  {
-    icon: Shield,
-    title: "リスク管理をサポート",
+    icon: "/images/icon-shield.png",
+    title: "リスク管理（規約遵守）",
     description:
       "ヤフショの規約に準拠した運用設計で、アカウントリスクを最小化します。",
-  },
-  {
-    icon: Rocket,
-    title: "立ち上げを最短化",
-    description:
-      "アカウント作成から管理画面構築まで、初期セットアップを迅速に完了させます。",
   },
 ];
 
@@ -73,8 +66,14 @@ export function Benefits() {
             >
               <div className="absolute inset-0 rounded-2xl bg-gradient-to-br from-primary/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
               <div className="relative">
-                <div className="w-14 h-14 rounded-xl bg-gradient-to-br from-primary/20 to-gold/10 flex items-center justify-center mb-6 border border-primary/20">
-                  <benefit.icon className="w-7 h-7 text-primary" />
+                <div className="w-16 h-16 rounded-xl bg-white flex items-center justify-center mb-6 border border-border shadow-sm">
+                  <Image
+                    src={benefit.icon}
+                    alt={benefit.title}
+                    width={48}
+                    height={48}
+                    className="w-12 h-12 object-contain"
+                  />
                 </div>
                 <h3 className="text-xl font-bold mb-3">{benefit.title}</h3>
                 <p className="text-muted-foreground leading-relaxed">
