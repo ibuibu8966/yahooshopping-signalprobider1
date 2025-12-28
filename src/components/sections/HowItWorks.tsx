@@ -64,15 +64,15 @@ export function HowItWorks() {
       </div>
 
       <div className="container mx-auto px-4 relative z-10">
-        <div className="text-center mb-20">
+        <div className="text-center mb-20 bg-white/90 backdrop-blur-sm rounded-2xl py-10 px-6 max-w-3xl mx-auto shadow-lg">
           <p className="text-primary text-sm font-medium tracking-widest uppercase mb-4">
             How It Works
           </p>
-          <h2 className="text-3xl md:text-5xl font-bold mb-6">
+          <h2 className="text-3xl md:text-5xl font-bold mb-6 text-gray-900">
             <span className="text-gradient">3ステップ</span>
             で運用開始
           </h2>
-          <p className="text-muted-foreground max-w-2xl mx-auto text-lg leading-relaxed">
+          <p className="text-gray-700 max-w-2xl mx-auto text-lg leading-relaxed">
             初期構築から運用開始、月次レポートまで。
             <br className="hidden md:block" />
             すべてをお任せいただけるシンプルな流れです。
