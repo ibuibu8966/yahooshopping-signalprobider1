@@ -6,8 +6,12 @@ const steps = [
     number: "01",
     icon: Settings,
     title: "初期構築",
-    description:
-      "ヤフショアカウントの作成、配送先住所・クレカ登録、管理画面・利益計算シートの作成、外注さんへのルール伝授を行います。",
+    description: [
+      "ヤフショアカウントの作成、",
+      "配送先住所・クレカ登録、",
+      "管理画面・利益計算シートの作成、",
+      "外注さんへのルール伝授を行います。",
+    ],
     items: [
       "ヤフショアカウント作成",
       "配送先住所・クレカ登録",
@@ -20,8 +24,11 @@ const steps = [
     number: "02",
     icon: Play,
     title: "運用開始",
-    description:
-      "購入商品と買取先のリサーチを行い、外注さんへ購入指示を出し、買取屋との連携を開始します。",
+    description: [
+      "購入商品と買取先のリサーチを行い、",
+      "外注さんへ購入指示を出し、",
+      "買取屋との連携を開始します。",
+    ],
     items: [
       "商品・買取先リサーチ",
       "外注さんへの購入指示",
@@ -33,8 +40,11 @@ const steps = [
     number: "03",
     icon: FileText,
     title: "月次レポート",
-    description:
-      "毎月の利益計算と詳細なレポートを作成し、運用状況をご報告。改善提案も行います。",
+    description: [
+      "毎月の利益計算と詳細なレポートを作成し、",
+      "運用状況をご報告。",
+      "改善提案も行います。",
+    ],
     items: ["利益計算", "運用レポート作成", "改善提案"],
   },
 ];
@@ -45,12 +55,12 @@ export function HowItWorks() {
       {/* Background image */}
       <div className="absolute inset-0 overflow-hidden">
         <Image
-          src="/images/pexels-pixabay-268976.jpg"
+          src="/images/pexels-nickcollins-1293120.jpg"
           alt="Background"
           fill
-          className="object-cover opacity-5"
+          className="object-cover opacity-90"
         />
-        <div className="absolute inset-0 bg-gradient-to-b from-background via-background/98 to-background" />
+        <div className="absolute inset-0 bg-gradient-to-b from-background/20 via-transparent to-background/20" />
       </div>
 
       <div className="container mx-auto px-4 relative z-10">
@@ -95,7 +105,12 @@ export function HowItWorks() {
                   </div>
 
                   <p className="text-muted-foreground mb-8 text-center leading-relaxed">
-                    {step.description}
+                    {step.description.map((line, i) => (
+                      <span key={i}>
+                        {line}
+                        {i < step.description.length - 1 && <br />}
+                      </span>
+                    ))}
                   </p>
 
                   <ul className="space-y-3">

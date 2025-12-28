@@ -38,19 +38,19 @@ export function Stats() {
           </p>
         </div>
 
-        <div className="grid grid-cols-2 md:grid-cols-4 gap-6 md:gap-8">
+        <div className="grid grid-cols-2 md:grid-cols-4 gap-4 md:gap-8">
           {stats.map((stat, index) => (
             <div
               key={index}
-              className="relative text-center p-8 md:p-10 rounded-2xl bg-card border border-border shadow-sm card-premium group"
+              className="relative text-center p-4 md:p-10 rounded-2xl bg-card border border-border shadow-sm card-premium group"
             >
               <div className="absolute inset-0 rounded-2xl bg-gradient-to-br from-primary/5 to-gold/5 opacity-0 group-hover:opacity-100 transition-opacity" />
               <div className="relative">
-                <p className="text-3xl md:text-4xl lg:text-5xl font-bold text-gradient mb-3">
+                <p className="text-2xl md:text-4xl lg:text-5xl font-bold text-gradient mb-2 md:mb-3">
                   {stat.value}
                 </p>
-                <p className="font-medium text-lg mb-2">{stat.label}</p>
-                <p className="text-sm text-muted-foreground">{stat.description}</p>
+                <p className="font-medium text-sm md:text-lg mb-1 md:mb-2">{stat.label}</p>
+                <p className="text-xs md:text-sm text-muted-foreground">{stat.description}</p>
               </div>
             </div>
           ))}
