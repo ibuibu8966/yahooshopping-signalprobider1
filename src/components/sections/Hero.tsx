@@ -1,21 +1,35 @@
+import Image from "next/image";
 import { Button } from "@/components/ui/button";
 import { ArrowRight, TrendingUp, Users, Zap } from "lucide-react";
 
 export function Hero() {
   return (
     <section className="relative overflow-hidden py-24 md:py-40">
-      {/* Background decorations */}
+      {/* Background image */}
       <div className="absolute inset-0 overflow-hidden">
-        <div className="absolute top-1/4 -left-20 w-96 h-96 bg-primary/5 rounded-full blur-3xl" />
-        <div className="absolute bottom-1/4 -right-20 w-80 h-80 bg-gold/5 rounded-full blur-3xl" />
+        <Image
+          src="/images/pexels-nickcollins-1293120.jpg"
+          alt="Background"
+          fill
+          className="object-cover opacity-10"
+          priority
+        />
+        <div className="absolute inset-0 bg-gradient-to-b from-background via-background/95 to-background" />
       </div>
 
       <div className="container mx-auto px-4 relative z-10">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
           <div className="space-y-10">
-            <div className="inline-flex items-center px-5 py-2.5 rounded-full border border-primary/30 bg-primary/5 text-primary text-sm font-medium tracking-wide">
-              <Zap className="w-4 h-4 mr-2" />
-              ヤフショ運用を完全代行
+            {/* Yahoo!ショッピング logo badge */}
+            <div className="inline-flex items-center gap-3 px-5 py-3 rounded-full border border-primary/30 bg-white shadow-sm">
+              <Image
+                src="/images/shopping_r_34_2x.png"
+                alt="Yahoo!ショッピング"
+                width={140}
+                height={24}
+                className="h-6 w-auto"
+              />
+              <span className="text-primary text-sm font-medium">運用代行</span>
             </div>
 
             <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold tracking-tight leading-tight">
@@ -60,23 +74,17 @@ export function Hero() {
           </div>
 
           <div className="relative">
-            <div className="aspect-[4/3] rounded-2xl bg-card border border-border shadow-xl overflow-hidden">
-              <div className="absolute inset-0 bg-gradient-to-br from-primary/5 to-gold/5" />
-              <div className="absolute inset-0 flex items-center justify-center">
-                <div className="text-center space-y-6 p-8">
-                  <div className="w-24 h-24 mx-auto rounded-2xl bg-gradient-to-br from-primary/20 to-gold/20 flex items-center justify-center border border-primary/20">
-                    <TrendingUp className="w-12 h-12 text-primary" />
-                  </div>
-                  <p className="text-muted-foreground text-sm">
-                    管理画面・利益計算シート
-                    <br />
-                    のスクリーンショット
-                  </p>
-                </div>
-              </div>
+            <div className="aspect-[4/3] rounded-2xl overflow-hidden shadow-2xl">
+              <Image
+                src="/images/pexels-sound-on-3756877.jpg"
+                alt="スマートフォンでの運用管理"
+                fill
+                className="object-cover"
+              />
+              <div className="absolute inset-0 bg-gradient-to-t from-black/30 to-transparent" />
             </div>
-            <div className="absolute -bottom-6 -right-6 w-32 h-32 bg-primary/10 rounded-full blur-3xl" />
-            <div className="absolute -top-6 -left-6 w-40 h-40 bg-gold/10 rounded-full blur-3xl" />
+            <div className="absolute -bottom-6 -right-6 w-32 h-32 bg-primary/20 rounded-full blur-3xl" />
+            <div className="absolute -top-6 -left-6 w-40 h-40 bg-gold/20 rounded-full blur-3xl" />
           </div>
         </div>
       </div>

@@ -1,3 +1,4 @@
+import Image from "next/image";
 import { Settings, Play, FileText } from "lucide-react";
 
 const steps = [
@@ -41,8 +42,16 @@ const steps = [
 export function HowItWorks() {
   return (
     <section id="how-it-works" className="py-24 md:py-40 relative">
-      {/* Subtle background gradient */}
-      <div className="absolute inset-0 bg-gradient-to-b from-transparent via-card/50 to-transparent" />
+      {/* Background image */}
+      <div className="absolute inset-0 overflow-hidden">
+        <Image
+          src="/images/pexels-pixabay-268976.jpg"
+          alt="Background"
+          fill
+          className="object-cover opacity-5"
+        />
+        <div className="absolute inset-0 bg-gradient-to-b from-background via-background/98 to-background" />
+      </div>
 
       <div className="container mx-auto px-4 relative z-10">
         <div className="text-center mb-20">

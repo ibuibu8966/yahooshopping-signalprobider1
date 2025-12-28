@@ -1,3 +1,4 @@
+import Image from "next/image";
 import { Button } from "@/components/ui/button";
 import { ArrowRight, Clock, Shield } from "lucide-react";
 
@@ -7,6 +8,13 @@ export function FinalCTA() {
       <div className="container mx-auto px-4">
         {/* CTA Banner */}
         <div className="relative overflow-hidden rounded-3xl bg-gradient-to-br from-primary via-primary to-primary/90 p-12 md:p-20 text-primary-foreground">
+          {/* Background image */}
+          <Image
+            src="/images/pexels-pixabay-45206.jpg"
+            alt="Background"
+            fill
+            className="object-cover opacity-20 mix-blend-overlay"
+          />
           <div className="relative z-10 max-w-3xl mx-auto text-center">
             <div className="inline-flex items-center gap-2 px-5 py-2.5 rounded-full bg-primary-foreground/10 backdrop-blur-sm text-sm font-medium mb-8 border border-primary-foreground/20">
               <Clock className="w-4 h-4" />
