@@ -35,20 +35,9 @@ const benefits = [
 
 export function Benefits() {
   return (
-    <section id="benefits" className="py-24 md:py-40 relative">
-      {/* Background image */}
-      <div className="absolute inset-0 overflow-hidden">
-        <Image
-          src="/images/pexels-pixabay-268976.jpg"
-          alt="Background"
-          fill
-          className="object-cover opacity-90"
-        />
-        <div className="absolute inset-0 bg-gradient-to-b from-background/20 via-transparent to-background/20" />
-      </div>
-
-      <div className="container mx-auto px-4 relative z-10">
-        <div className="text-center mb-20 bg-white/90 backdrop-blur-sm rounded-2xl py-10 px-6 max-w-3xl mx-auto shadow-lg">
+    <section id="benefits" className="py-24 md:py-40 bg-gray-50">
+      <div className="container mx-auto px-4">
+        <div className="text-center mb-20">
           <p className="text-primary text-sm font-medium tracking-widest uppercase mb-4">
             Why Choose Us
           </p>

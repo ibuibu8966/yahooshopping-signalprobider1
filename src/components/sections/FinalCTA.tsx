@@ -4,19 +4,8 @@ import { ArrowRight, Clock, Shield } from "lucide-react";
 
 export function FinalCTA() {
   return (
-    <section id="contact" className="py-24 md:py-40 relative">
-      {/* Background image */}
-      <div className="absolute inset-0 overflow-hidden">
-        <Image
-          src="/images/pexels-pixabay-268976.jpg"
-          alt="Background"
-          fill
-          className="object-cover opacity-90"
-        />
-        <div className="absolute inset-0 bg-gradient-to-b from-background/20 via-transparent to-background/20" />
-      </div>
-
-      <div className="container mx-auto px-4 relative z-10">
+    <section id="contact" className="py-24 md:py-40 bg-white">
+      <div className="container mx-auto px-4">
         {/* CTA Banner */}
         <div className="relative overflow-hidden rounded-3xl bg-gradient-to-br from-primary via-primary to-primary/90 p-12 md:p-20 text-primary-foreground">
           {/* Background pattern */}
