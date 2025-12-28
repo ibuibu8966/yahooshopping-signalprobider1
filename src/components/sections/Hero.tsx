@@ -1,6 +1,16 @@
 import Image from "next/image";
 import { Button } from "@/components/ui/button";
-import { ArrowRight, TrendingUp, Users, Zap } from "lucide-react";
+import { ArrowRight, TrendingUp, Users } from "lucide-react";
+
+// スプレッドシート風のダミーデータ
+const sheetData = [
+  { month: "4月", purchase: "6,427,700", profit: "240,447", rate: "3.7%" },
+  { month: "5月", purchase: "3,131,200", profit: "99,015", rate: "3.2%" },
+  { month: "6月", purchase: "11,197,871", profit: "399,194", rate: "3.6%" },
+  { month: "7月", purchase: "8,378,835", profit: "270,695", rate: "3.2%" },
+  { month: "8月", purchase: "4,874,090", profit: "183,561", rate: "3.8%" },
+  { month: "9月", purchase: "6,831,400", profit: "263,035", rate: "3.9%" },
+];
 
 export function Hero() {
   return (
@@ -73,16 +83,66 @@ export function Hero() {
             </div>
           </div>
 
+          {/* スプレッドシート風UI */}
           <div className="relative">
-            <div className="aspect-[4/3] rounded-2xl overflow-hidden shadow-2xl">
-              <Image
-                src="/images/pexels-sound-on-3756877.jpg"
-                alt="スマートフォンでの運用管理"
-                fill
-                className="object-cover"
-              />
-              <div className="absolute inset-0 bg-gradient-to-t from-black/30 to-transparent" />
+            <div className="rounded-2xl overflow-hidden shadow-2xl border border-border bg-white">
+              {/* シートヘッダー */}
+              <div className="bg-gradient-to-r from-primary to-primary/80 px-4 py-3 flex items-center gap-2">
+                <div className="flex gap-1.5">
+                  <div className="w-3 h-3 rounded-full bg-white/30" />
+                  <div className="w-3 h-3 rounded-full bg-white/30" />
+                  <div className="w-3 h-3 rounded-full bg-white/30" />
+                </div>
+                <span className="text-white text-sm font-medium ml-2">利益計算シート.xlsx</span>
+              </div>
+
+              {/* シート内容 */}
+              <div className="overflow-hidden">
+                <table className="w-full text-sm">
+                  <thead>
+                    <tr className="bg-gray-100 border-b border-gray-200">
+                      <th className="px-3 py-2 text-left font-medium text-gray-600 border-r border-gray-200">月度</th>
+                      <th className="px-3 py-2 text-right font-medium text-gray-600 border-r border-gray-200">仕入れ高</th>
+                      <th className="px-3 py-2 text-right font-medium text-gray-600 border-r border-gray-200">荒利益</th>
+                      <th className="px-3 py-2 text-right font-medium text-gray-600">利益率</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    {sheetData.map((row, index) => (
+                      <tr key={index} className={`border-b border-gray-100 ${index % 2 === 0 ? 'bg-white' : 'bg-gray-50'}`}>
+                        <td className="px-3 py-2.5 font-medium text-gray-800 border-r border-gray-100">{row.month}</td>
+                        <td className="px-3 py-2.5 text-right text-gray-700 border-r border-gray-100 font-mono">¥{row.purchase}</td>
+                        <td className="px-3 py-2.5 text-right text-green-600 border-r border-gray-100 font-mono font-medium">¥{row.profit}</td>
+                        <td className="px-3 py-2.5 text-right font-mono">
+                          <span className="inline-flex items-center px-2 py-0.5 rounded bg-primary/10 text-primary font-medium">
+                            {row.rate}
+                          </span>
+                        </td>
+                      </tr>
+                    ))}
+                  </tbody>
+                  <tfoot>
+                    <tr className="bg-primary/5 border-t-2 border-primary/20">
+                      <td className="px-3 py-3 font-bold text-gray-800 border-r border-gray-200">合計</td>
+                      <td className="px-3 py-3 text-right font-bold text-gray-800 border-r border-gray-200 font-mono">¥40,841,096</td>
+                      <td className="px-3 py-3 text-right font-bold text-green-600 border-r border-gray-200 font-mono">¥1,455,947</td>
+                      <td className="px-3 py-3 text-right">
+                        <span className="inline-flex items-center px-2 py-0.5 rounded bg-primary text-white font-bold">
+                          3.6%
+                        </span>
+                      </td>
+                    </tr>
+                  </tfoot>
+                </table>
+              </div>
+
+              {/* シートフッター */}
+              <div className="bg-gray-50 px-4 py-2 border-t border-gray-200 flex justify-between items-center">
+                <span className="text-xs text-gray-500">2024年度 運用実績</span>
+                <span className="text-xs text-gray-400">毎月更新</span>
+              </div>
             </div>
+
             <div className="absolute -bottom-6 -right-6 w-32 h-32 bg-primary/20 rounded-full blur-3xl" />
             <div className="absolute -top-6 -left-6 w-40 h-40 bg-gold/20 rounded-full blur-3xl" />
           </div>
