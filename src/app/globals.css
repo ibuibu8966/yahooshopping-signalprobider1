@@ -99,6 +99,14 @@
   * {
     @apply border-border outline-ring/50;
   }
+  html {
+    font-size: 13px; /* Base: 16px - 3px = 13px for mobile */
+  }
+  @media (min-width: 768px) {
+    html {
+      font-size: 16px; /* Desktop: normal 16px */
+    }
+  }
   body {
     @apply bg-background text-foreground;
     font-feature-settings: "palt";
