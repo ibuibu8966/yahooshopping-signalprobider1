@@ -21,10 +21,10 @@ export function Hero() {
           src="/images/pexels-pixabay-268976.jpg"
           alt="Background"
           fill
-          className="object-cover opacity-10"
+          className="object-cover opacity-30"
           priority
         />
-        <div className="absolute inset-0 bg-gradient-to-b from-background via-background/95 to-background" />
+        <div className="absolute inset-0 bg-gradient-to-b from-background/80 via-background/70 to-background/80" />
       </div>
 
       <div className="container mx-auto px-4 relative z-10">
