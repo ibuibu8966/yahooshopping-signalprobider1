@@ -1,3 +1,4 @@
+import Image from "next/image";
 import {
   Accordion,
   AccordionContent,
@@ -46,19 +47,27 @@ const faqs = [
 export function FAQ() {
   return (
     <section id="faq" className="py-24 md:py-40 relative">
-      {/* Subtle background */}
-      <div className="absolute inset-0 bg-gradient-to-b from-transparent via-card/30 to-transparent" />
+      {/* Background image */}
+      <div className="absolute inset-0 overflow-hidden">
+        <Image
+          src="/images/pexels-pixabay-268976.jpg"
+          alt="Background"
+          fill
+          className="object-cover opacity-90"
+        />
+        <div className="absolute inset-0 bg-gradient-to-b from-background/20 via-transparent to-background/20" />
+      </div>
 
       <div className="container mx-auto px-4 relative z-10">
-        <div className="text-center mb-20">
+        <div className="text-center mb-20 bg-white/90 backdrop-blur-sm rounded-2xl py-10 px-6 max-w-3xl mx-auto shadow-lg">
           <p className="text-primary text-sm font-medium tracking-widest uppercase mb-4">
             FAQ
           </p>
-          <h2 className="text-3xl md:text-5xl font-bold mb-6">
+          <h2 className="text-3xl md:text-5xl font-bold mb-6 text-gray-900">
             よくある
             <span className="text-gradient">ご質問</span>
           </h2>
-          <p className="text-muted-foreground max-w-2xl mx-auto text-lg">
+          <p className="text-gray-700 max-w-2xl mx-auto text-lg">
             お問い合わせ前にご確認ください。
           </p>
         </div>
